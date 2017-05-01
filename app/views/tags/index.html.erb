@@ -1,0 +1,15 @@
+<html>
+	<h1>All Tags</h1>
+
+	<ul id="tags">
+  	<% @tags.each do |tag| %>
+    	<li>
+      		<%= link_to tag.name, tag %>
+      			<% tag.articles.each do |article| %>
+    			<%= link_to article.title, article %>
+  			<% end %>
+   		</li>
+  	<% end %>
+	</ul>
+	
+</html>
